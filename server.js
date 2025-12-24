@@ -29,9 +29,9 @@ const PRODUCT_CATALOG = {
     'Custom Crank Blend': 8000
 };
 
-// Note: Payment processing has been removed. 
-// The server now primarily serves static files.
 
 // Start Server
 const PORT = process.env.PORT || 4242;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+module.exports = app;
