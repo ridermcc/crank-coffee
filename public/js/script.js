@@ -793,33 +793,33 @@ function renderCartItems() {
             }
 
             container.innerHTML += `
-                <div class="group relative bg-white/5 hover:bg-white/10 rounded-sm p-6 mb-4 transition-all border border-white/5 hover:border-white/10">
-                    <button onclick="window.removeFromBrief(${item.id})" class="absolute top-4 right-4 text-gray-600 hover:text-red-400 transition-colors">
-                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-
-                    <div class="flex gap-6">
-                        <div class="flex-1">
-                            <h4 class="font-display font-bold text-xl text-white tracking-wide">${item.name}</h4>
-                            ${detailsHTML}
-                        </div>
+                <div class="group relative bg-white/5 rounded-sm p-4 mb-3 border border-white/5 flex gap-4 items-start">
+                    
+                    <!-- Image -->
+                    <div class="w-20 h-24 flex-shrink-0 bg-black/20 rounded-sm overflow-hidden">
+                        <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover opacity-80">
                     </div>
 
-                    <div class="flex items-end justify-between mt-6 pt-4 border-t border-white/5">
-                        <div>
-                            <label class="text-[10px] text-gray-500 uppercase tracking-wider block mb-2">Quantity (${item.unit})</label>
-                            <div class="flex items-center gap-3">
-                                <button onclick="window.updateCartItem(${item.id}, 'qty', ${item.qty - 1})" 
-                                    class="w-6 h-6 flex items-center justify-center text-gray-400 hover:text-white transition-colors text-lg">-</button>
-                                <span class="text-white font-bold font-mono text-lg w-8 text-center">${item.qty}</span>
-                                <button onclick="window.updateCartItem(${item.id}, 'qty', ${item.qty + 1})" 
-                                    class="w-6 h-6 flex items-center justify-center text-gray-400 hover:text-white transition-colors text-lg">+</button>
-                            </div>
+                    <!-- Content -->
+                    <div class="flex-1 min-w-0">
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-display font-bold text-lg text-white leading-tight pr-6">${item.name}</h4>
+                            <button onclick="window.removeFromBrief(${item.id})" class="text-gray-500 hover:text-red-400 -mt-1 -mr-1 p-2">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
                         </div>
-                        <div class="text-right">
-                            <div class="font-display font-bold text-2xl text-gold-500">$${item.totalPrice}</div>
+
+                        ${detailsHTML}
+
+                        <div class="flex justify-between items-end mt-3 pt-3 border-t border-white/5">
+                            <div class="text-xs text-gray-400 font-mono">
+                                ${item.qty} ${item.unit} @ $${item.unitPrice}
+                            </div>
+                            <div class="font-bold text-gold-500 text-lg">
+                                $${item.totalPrice}
+                            </div>
                         </div>
                     </div>
                 </div>
