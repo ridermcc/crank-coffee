@@ -1,0 +1,17 @@
+.text-shadow-sm {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-lg {
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+/* Hide scrollbar for clean modal */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

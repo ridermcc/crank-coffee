@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crank Custom Coffee | Bespoke Micro-Roaster</title>
+    <meta name="description"
+        content="Small-batch, custom micro-roasted coffee from Calgary, Alberta. Request fresh roasted beans or green beans directly from the roaster.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Stripe Script Removed -->
+
+</head>
+
+<body class="bg-coffee-900 text-gray-200 font-sans antialiased relative">
+
+    <nav id="navbar"
+        class="fixed w-full z-50 transition-all duration-300 border-b border-white/5 bg-coffee-900/90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="flex-shrink-0 flex items-center gap-3 group">
+                    <img src="assets/images/Logo/logg-white.png" alt="Crank Logo"
+                        class="h-12 w-auto transition-transform group-hover:rotate-12">
+                    <span
+                        class="font-lickety font-bold text-xl tracking-widest text-white group-hover:text-gold-500 transition-colors">CRANK
+                        CUSTOM COFFEE</span>
+                </a>
+
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#menu"
+                        class="text-sm font-medium hover:text-gold-500 transition-colors tracking-wide">ROAST MENU</a>
+                    <a href="#about" class="text-sm font-medium hover:text-gold-500 transition-colors tracking-wide">OUR
+                        STORY</a>
+                    <a href="#services"
+                        class="text-sm font-medium hover:text-gold-500 transition-colors tracking-wide">SERVICES</a>
+                    <a href="#" onclick="openCartModal(); return false;"
+                        class="bg-gold-500 text-coffee-900 hover:bg-white px-5 py-2 rounded-sm font-display font-bold tracking-wider transition-all transform hover:-translate-y-0.5">
+                        MY ROAST LIST
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-gold-500 focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-coffee-800 border-t border-white/10">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <a href="#about" class="block px-3 py-2 text-base font-medium hover:text-gold-500">Our Story</a>
+                <a href="#how-it-works" class="block px-3 py-2 text-base font-medium hover:text-gold-500">How It
+                    Works</a>
+                <a href="#menu" class="block px-3 py-2 text-base font-medium hover:text-gold-500">Roast Menu</a>
+                <a href="#services" class="block px-3 py-2 text-base font-medium hover:text-gold-500">Services</a>
+                <a href="#" onclick="openCartModal(); return false;"
+                    class="block px-3 py-3 mt-4 text-center font-bold bg-gold-500 text-coffee-900 rounded-sm">MY ROAST
+                    LIST</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/Roasting_Images/roast-hero-1.jpg" alt="Roasting Coffee"
+                class="w-full h-full object-cover opacity-60">
+            <div class="absolute inset-0 bg-gradient-to-t from-coffee-900 via-coffee-900/40 to-black/30"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
+            <span
+                class="inline-block py-1 px-3 border border-gold-500/50 rounded-full text-gold-400 text-xs font-bold tracking-[0.2em] mb-6 animate-fade-in-up">EST.
+                2021 CALGARY</span>
+            <h1
+                class="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-none tracking-tight text-shadow-lg">
+                MICRO-ROAST COFFEE<br><span class="text-gold-500">CRAFTED FOR YOU</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-200 font-serif italic mb-10 max-w-2xl mx-auto text-shadow-sm">
+                We don't roast for shelves. We roast for you. Build your list, and we will fire up the roaster.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#menu"
+                    class="bg-gold-500 text-coffee-900 hover:bg-white px-8 py-4 text-lg font-display font-bold tracking-widest transition-all shadow-lg hover:shadow-gold-500/20">
+                    VIEW THE MENU
+                </a>
+                <a href="#contact"
+                    class="border border-white/30 hover:border-white hover:bg-white/5 text-white px-8 py-4 text-lg font-display font-bold tracking-widest transition-all">
+                    CONTACT US
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="border-y border-white/5 bg-coffee-800/50 backdrop-blur-sm relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div
+                class="flex flex-wrap justify-center md:justify-between items-center gap-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                <img src="assets/images/Badges/UTZ.avif" alt="UTZ" class="h-12 w-auto">
+                <img src="assets/images/Badges/fairtrade.png" alt="Fairtrade" class="h-12 w-auto">
+                <img src="assets/images/Badges/Rainforest_Alliance.avif" alt="Rainforest Alliance" class="h-12 w-auto">
+                <img src="assets/images/Badges/Swiss_Water_Process.avif" alt="Swiss Water" class="h-12 w-auto">
+            </div>
+        </div>
+    </div>
+
+    <section id="menu" class="py-24 bg-coffee-900 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-16">
+                <h2 class="text-gold-500 font-bold tracking-widest text-sm uppercase mb-3">Fresh Roasted</h2>
+                <h3 class="font-display font-bold text-4xl md:text-5xl text-white mb-6">ROASTER'S LOG</h3>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mb-8"></div>
+                <p class="text-gray-400 font-serif italic text-lg max-w-2xl mx-auto leading-relaxed">
+                    Current small-batch offerings. Select your preferred roast profile for each origin.
+                </p>
+            </div>
+
+            <div id="product-grid" class="flex flex-col gap-12">
+            </div>
+
+        </div>
+    </section>
+
+    <section id="custom-blend" class="py-24 bg-coffee-800 border-t border-white/5 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none"
+            style="background-image: radial-gradient(#c5a059 1px, transparent 1px); background-size: 32px 32px;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+            <div class="text-center mb-12">
+                <h2 class="text-gold-500 font-bold tracking-widest text-sm uppercase mb-3">The Workshop</h2>
+                <h3 class="font-display font-bold text-4xl text-white">BUILD YOUR <span class="text-gold-500">OWN
+                        BLEND</span></h3>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto font-serif italic">
+                    Choose your base origins and roast profile. We roast it in 4-bag batches specifically for you.
+                </p>
+            </div>
+
+            <div id="custom-builder-container"></div>
+
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-cream text-coffee-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-4 bg-gold-500/20 rounded-lg transform rotate-2 transition-transform group-hover:rotate-1">
+                    </div>
+                    <img src="assets/images/Roasting_Images/IMG-1267_1500x.webp" alt="Master Roaster"
+                        class="relative rounded-lg shadow-2xl w-full object-cover h-64 md:h-[500px]">
+                </div>
+                <div>
+                    <h2 class="text-gold-500 font-bold tracking-widest text-sm uppercase mb-3">Our Philosophy</h2>
+                    <h2 class="font-display font-bold text-4xl mb-6">NOT YOUR AVERAGE <span
+                            class="text-coffee-600">DAILY GRIND</span></h2>
+                    <div class="w-16 h-1 bg-gold-500 mb-8"></div>
+                    <p class="font-serif text-lg text-gray-700 mb-6 leading-relaxed">
+                        We believe mass-produced coffee has lost its soul. At Crank Custom Coffee, we roast specifically
+                        for your order. Located in the heart of Calgary, we are a micro-roaster dedicated to the craft.
+                    </p>
+                    <p class="font-sans text-gray-600 mb-8 leading-relaxed">
+                        When you request a roast from us, you aren't just buying a bag; you are requesting a batch.
+                        Every bean is treated with individual attention.
+                    </p>
+                    <ul class="space-y-4 font-display font-medium tracking-wide text-coffee-800">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gold-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            Ethically Sourced Beans
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gold-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            Roasted Fresh Upon Request
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gold-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            Direct to Roaster Service
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-cream text-coffee-900 border-t border-white/5 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+
+                <div class="order-2 md:order-1">
+                    <h2 class="text-gold-500 font-bold tracking-widest text-sm uppercase mb-3">The Science</h2>
+                    <h3 class="font-display font-bold text-4xl mb-6">PRECISION <span class="text-coffee-600">ROAST
+                            PROFILING</span></h3>
+                    <div class="w-16 h-1 bg-gold-500 mb-8"></div>
+                    <p class="font-serif text-lg text-gray-700 mb-6 leading-relaxed">
+                        Roasting coffee is a delicate balance of thermodynamics and chemistry. To ensure your custom
+                        batch is perfect, we rely on more than just intuition; we rely on data.
+                    </p>
+                    <p class="font-sans text-gray-600 mb-8 leading-relaxed">
+                        We utilize advanced roasting intelligence software to map the roast curve in real-time. By
+                        monitoring the "Rate of Rise" (RoR) and precise bean temperatures, we can manipulate the
+                        development of the roast to the second.
+                    </p>
+                    <ul class="space-y-4 font-display font-medium tracking-wide text-coffee-800">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gold-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            Real-time Data Logging
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gold-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            Artisan Control
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="relative group order-1 md:order-2">
+                    <div
+                        class="absolute -inset-4 bg-gold-500/20 rounded-lg transform -rotate-2 transition-transform group-hover:rotate-1">
+                    </div>
+                    <img src="assets/images/Roasting_Images/how-we-roast.webp" alt="Roast Profiling Software and Trier"
+                        class="relative rounded-lg shadow-2xl w-full object-cover border border-coffee-900/5 opacity-90 group-hover:opacity-100 transition-opacity duration-500 h-64 md:h-[500px]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-cream text-coffee-900 border-t border-white/5 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative group order-1">
+                    <div
+                        class="absolute -inset-4 bg-gold-500/20 rounded-lg transform rotate-2 transition-transform group-hover:rotate-1">
+                    </div>
+                    <img src="assets/images/Roasting_Images/bean-delivery.webp" alt="Bean Delivery"
+                        class="relative rounded-lg shadow-2xl w-full object-cover h-64 md:h-[500px]">
+                </div>
+                <div class="order-2">
+                    <h2 class="text-gold-500 font-bold tracking-widest text-sm uppercase mb-3">The Journey</h2>
+                    <h3 class="font-display font-bold text-4xl mb-6">FROM CROP TO <span
+                            class="text-coffee-600">CUP</span></h3>
+                    <div class="w-16 h-1 bg-gold-500 mb-8"></div>
+                    <p class="font-serif text-lg text-gray-700 mb-6 leading-relaxed">
+                        Great coffee starts at the source. We work directly with Alberta based importers to secure the
+                        highest quality beans from around the world, with the majority of our sourcing coming from
+                        India,
+                        Ethiopia, Colombia, Brazil, and Indonesia.
+                    </p>
+
+                    <ul class="space-y-4 font-display font-medium tracking-wide text-coffee-800">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gold-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            Trusted Importer Partnerships
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gold-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            Seasonal Selection
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gold-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            Quality Control
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="green-beans" class="py-24 bg-coffee-800 border-t border-white/5 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -ml-20 -mt-20"></div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <h2 class="text-gold-500 font-bold tracking-widest text-sm uppercase mb-2">The Source</h2>
+                    <h3 class="font-display font-bold text-4xl text-white">RAW BEANS</h3>
+                </div>
+                <p
+                    class="text-gray-400 text-sm max-w-md text-left md:text-right font-serif italic border-l border-gold-500 pl-4">
+                    "For the home roaster. Premium unroasted beans, sourced from the world's best regions, ready for
+                    your
+                    craft."
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-12" id="green-beans-grid">
+                <!-- Green beans rendered via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CUSTOM LABELLING SECTION -->
+    <section id="custom-labelling"
+        class="py-24 bg-cream text-coffee-900 border-t border-white/5 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+
+                <!-- Image Left -->
+                <div class="relative group order-1">
+                    <div
+                        class="absolute -inset-4 bg-gold-500/20 rounded-lg transform rotate-2 transition-transform group-hover:rotate-1">
+                    </div>
+                    <img src="assets/images/services/Custom-Label.webp" alt="Custom Label Coffee"
+                        class="relative rounded-lg shadow-2xl w-full object-cover h-64 md:h-[500px]">
+                </div>
+
+                <!-- Text Right -->
+                <div class="order-2">
+                    <h2 class="text-gold-500 font-bold tracking-widest text-sm uppercase mb-3">Expansive Services</h2>
+                    <h3 class="font-display font-bold text-4xl mb-6">CUSTOM <span
+                            class="text-coffee-600">LABELLING</span></h3>
+                    <div class="w-16 h-1 bg-gold-500 mb-8"></div>
+                    <p class="font-serif text-lg text-gray-700 mb-6 leading-relaxed">
+                        Make a lasting impression with your own brand of premium coffee. Perfect for weddings, corporate
+                        gifts, or special events, our custom labelling service puts your name on our small-batch roasts.
+                    </p>
+                    <p class="font-sans text-gray-600 mb-8 leading-relaxed">
+                        We handle everything from the roast to the label design. You choose the bean and the roast
+                        profile, and we create a package that is uniquely yours.
+                    </p>
+                    <ul class="space-y-4 font-display font-medium tracking-wide text-coffee-800">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gold-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            Bespoke Label Design
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gold-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            Low Minimum Orders
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gold-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            Premium Packaging
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHOLESALE & OFFICE SECTION -->
+    <section id="wholesale"
+        class="py-24 bg-cream text-coffee-900 border-t border-coffee-900/5 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+
+                <!-- Text Left -->
+                <div class="order-2 md:order-1">
+                    <h2 class="text-gold-500 font-bold tracking-widest text-sm uppercase mb-3">Partner With Us</h2>
+                    <h3 class="font-display font-bold text-4xl mb-6">WHOLESALE & <span
+                            class="text-coffee-600">OFFICE</span></h3>
+                    <div class="w-16 h-1 bg-gold-500 mb-8"></div>
+                    <p class="font-serif text-lg text-gray-700 mb-6 leading-relaxed">
+                        Elevate your office coffee game or serve the best beans in your cafe. We offer tailored
+                        wholesale solutions that ensure you never run out of fresh, locally roasted coffee.
+                    </p>
+                    <p class="font-sans text-gray-600 mb-8 leading-relaxed">
+                        Our partners enjoy exclusive pricing, equipment consultation, and recurring delivery schedules
+                        that fit your consumption needs.
+                    </p>
+                    <ul class="space-y-4 font-display font-medium tracking-wide text-coffee-800">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gold-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            Volume Discounts
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gold-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            Recurring Delivery
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gold-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            Equipment Support
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Image Right -->
+                <div class="relative group order-1 md:order-2">
+                    <div
+                        class="absolute -inset-4 bg-gold-500/20 rounded-lg transform -rotate-2 transition-transform group-hover:rotate-1">
+                    </div>
+                    <img src="assets/images/services/Bulk-Orders.webp" alt="Wholesale Coffee"
+                        class="relative rounded-lg shadow-2xl w-full object-cover h-64 md:h-[500px]">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-coffee-900 border-t border-coffee-900/5 relative overflow-hidden">
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-500/5 rounded-full blur-3xl -z-10 pointer-events-none">
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+
+            <h2 class="text-gold-500 font-bold tracking-widest text-sm uppercase mb-3">Connect</h2>
+            <h3 class="font-display font-bold text-4xl text-white mb-6">GET IN <span class="text-gold-500">TOUCH</span>
+            </h3>
+            <div class="w-16 h-1 bg-gold-500 mx-auto mb-10"></div>
+
+            <p class="font-serif text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto mb-16">
+                We are a dedicated micro-roastery. Whether you are looking for a wholesale partnership or a custom batch
+                for your home, we are ready to roast.
+            </p>
+
+            <div class="flex flex-col md:flex-row justify-center items-center md:items-start gap-12 md:gap-24">
+
+                <div class="space-y-2">
+                    <h4 class="font-display font-bold text-white text-xl tracking-wide uppercase">Email</h4>
+                    <a href="mailto:crankcustomcoffee@gmail.com"
+                        class="block font-sans text-gold-500 text-lg hover:text-white transition-colors">
+                        crankcustomcoffee@gmail.com
+                    </a>
+                </div>
+
+                <div class="hidden md:block w-px h-16 bg-white/10"></div>
+
+                <div class="space-y-2">
+                    <h4 class="font-display font-bold text-white text-xl tracking-wide uppercase">Location</h4>
+                    <p class="font-sans text-gray-300 text-lg">
+                        Calgary, Alberta
+                    </p>
+                    <p class="text-xs text-gray-500 uppercase tracking-wider mt-1">Micro-roasting (No retail front)</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- REVIEW PROMPT SECTION -->
+    <section id="review-prompt"
+        class="hidden py-16 bg-gold-500 text-coffee-900 border-t border-coffee-900/5 relative overflow-hidden transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h3 class="font-display font-bold text-3xl md:text-4xl mb-4">YOUR ROAST LIST IS READY</h3>
+            <p class="font-serif text-lg md:text-xl text-coffee-800 mb-8 max-w-2xl mx-auto">
+                You have added items to your list. Review your selection and submit your request to get the roaster
+                fired up.
+            </p>
+            <button onclick="openCartModal()"
+                class="bg-coffee-900 text-gold-500 hover:bg-white hover:text-coffee-900 px-10 py-4 text-xl font-display font-bold tracking-widest transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                REVIEW & REQUEST
+            </button>
+        </div>
+    </section>
+
+    <footer class="bg-black text-gray-500 py-12 border-t border-white/10">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <img src="assets/images/Logo/logg-white.png" alt="Logo"
+                    class="h-10 opacity-50 grayscale hover:grayscale-0 transition-all">
+                <span class="font-lickety font-bold text-gray-400 tracking-widest">CRANK CUSTOM COFFEE</span>
+            </div>
+            <div class="text-sm">
+                &copy; 2025 Calgary, Alberta. All rights reserved.
+            </div>
+            <div class="flex space-x-6">
+                <a href="mailto:crankcustomcoffee@gmail.com" class="hover:text-gold-500 transition-colors">Contact</a>
+                <a href="#" class="hover:text-gold-500 transition-colors">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button (FAB) for Cart -->
+    <div id="cart-fab" class="fixed bottom-8 right-8 z-50 transform translate-y-32 transition-transform duration-500">
+        <button onclick="openCartModal()"
+            class="relative bg-gold-500 hover:bg-white text-coffee-900 w-16 h-16 rounded-full shadow-2xl flex items-center justify-center transition-all hover:scale-110 group">
+            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            <span id="fab-count"
+                class="absolute -top-2 -right-2 bg-coffee-900 text-gold-500 text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center border-2 border-gold-500">0</span>
+        </button>
+    </div>
+
+    <div id="product-modal" class="fixed inset-0 z-[100] hidden" aria-labelledby="modal-title" role="dialog"
+        aria-modal="true">
+        <div class="fixed inset-0 bg-black/90 backdrop-blur-sm transition-opacity opacity-0" id="modal-backdrop"></div>
+        <div class="fixed inset-0 z-10 overflow-y-auto">
+            <div class="flex min-h-full items-center justify-center p-4">
+                <div class="relative transform overflow-hidden rounded-lg bg-coffee-800 text-left shadow-2xl transition-all w-11/12 md:w-full sm:max-w-4xl border border-white/10 opacity-0 scale-95 max-h-[90vh] overflow-y-auto overflow-x-hidden"
+                    id="modal-panel">
+                    <button onclick="closeModal()"
+                        class="absolute right-4 top-4 text-gray-400 hover:text-white z-20 transition-colors">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+
+                    <div class="flex flex-col md:flex-row-reverse">
+                        <div class="md:w-2/5 h-72 md:h-auto bg-white/5 relative flex items-center justify-center">
+                            <img id="modal-image" src="" class="w-full h-full object-cover drop-shadow-xl">
+                        </div>
+
+                        <div class="md:w-3/5 p-6 md:p-8 flex flex-col h-full">
+                            <h3 id="modal-title" class="text-2xl font-display font-bold text-white mb-2"></h3>
+
+                            <p class="text-xl text-gold-500 font-bold mb-6">
+                                $<span id="modal-price-display">0</span>
+                                <span class="text-sm text-gray-500 font-normal">Total</span>
+                            </p>
+
+                            <div class="space-y-6 flex-1">
+                                <div>
+                                    <span class="text-gray-500 uppercase text-xs font-bold tracking-wider">Origin: <span
+                                            id="modal-origin"
+                                            class="text-gray-200 normal-case font-normal ml-1"></span></span>
+                                    <p id="modal-description"
+                                        class="text-gray-300 leading-relaxed text-sm mt-2 whitespace-pre-wrap"></p>
+                                </div>
+
+                                <div id="blend-select-container" class="hidden">
+                                    <label for="blend-select"
+                                        class="text-gold-500 uppercase text-xs font-bold tracking-wider block mb-2">Select
+                                        Blend Ratio</label>
+                                    <select id="blend-select"
+                                        class="w-full bg-white/10 border border-white/10 rounded p-2 text-white focus:outline-none focus:border-gold-500 transition-colors">
+                                        <option value="1/3 Colombian - 1/3 Ethiopian - 1/3 Indian">1/3 Colombian - 1/3
+                                            Ethiopian - 1/3 Indian</option>
+                                        <option value="1/4 Colombian - 1/4 Ethiopian - 1/2 Indian">1/4 Colombian - 1/4
+                                            Ethiopian - 1/2 Indian</option>
+                                        <option value="1/4 Colombian - 1/2 Ethiopian - 1/4 Indian">1/4 Colombian - 1/2
+                                            Ethiopian - 1/4 Indian</option>
+                                        <option value="1/2 Colombian - 1/2 Ethiopian">1/2 Colombian - 1/2 Ethiopian
+                                        </option>
+                                        <option value="1/2 Colombian - 1/2 Indian">1/2 Colombian - 1/2 Indian</option>
+                                        <option value="1/2 Ethiopian - 1/2 Indian">1/2 Ethiopian - 1/2 Indian</option>
+                                    </select>
+                                </div>
+
+                                <div id="roast-select-container">
+                                    <label for="roast-select"
+                                        class="text-gold-500 uppercase text-xs font-bold tracking-wider block mb-2">Select
+                                        Roast Profile</label>
+                                    <select id="roast-select"
+                                        class="w-full bg-white/10 border border-white/10 rounded p-2 text-white focus:outline-none focus:border-gold-500 transition-colors">
+                                        <option value="Light">Light</option>
+                                        <option value="Medium">Medium</option>
+                                        <option value="Medium/Dark">Medium/Dark</option>
+                                        <option value="Dark">Dark</option>
+                                        <option value="Roaster's Choice">Roaster's Choice</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label id="qty-label"
+                                        class="text-gold-500 uppercase text-xs font-bold tracking-wider block mb-2">Quantity
+                                        (Bags)</label>
+                                    <div class="flex items-center gap-4">
+                                        <button onclick="adjustQty(-1)"
+                                            class="w-10 h-10 rounded bg-white/10 hover:bg-gold-500 hover:text-coffee-900 text-white font-bold text-xl transition-colors">-</button>
+                                        <input id="qty-input" type="number" value="1" min="1" readonly
+                                            class="w-16 h-10 bg-transparent text-center text-white font-bold text-xl border-b border-white/20">
+                                        <button onclick="adjustQty(1)"
+                                            class="w-10 h-10 rounded bg-white/10 hover:bg-gold-500 hover:text-coffee-900 text-white font-bold text-xl transition-colors">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-8 pt-6 border-t border-white/10">
+                                <button id="modal-add-btn" onclick="addToBrief()"
+                                    class="block w-full text-center bg-gold-500 hover:bg-white hover:text-coffee-900 text-coffee-900 font-bold py-3 rounded transition-colors uppercase tracking-widest shadow-lg">
+                                    Add to List
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cart-modal" class="fixed inset-0 z-[105] hidden" aria-labelledby="modal-title" role="dialog"
+        aria-modal="true">
+        <div class="fixed inset-0 bg-black/90 backdrop-blur-sm transition-opacity opacity-0" id="cart-backdrop"></div>
+        <div class="fixed inset-0 z-10 overflow-y-auto">
+            <div class="flex min-h-full items-center justify-center p-4">
+                <div class="relative transform overflow-hidden rounded-lg bg-coffee-800 text-left shadow-2xl transition-all sm:w-full sm:max-w-lg md:max-w-2xl border border-white/10 opacity-0 scale-95 h-[80vh] md:h-[90vh] flex flex-col"
+                    id="cart-panel">
+
+                    <div
+                        class="flex-none p-6 border-b border-white/5 flex justify-between items-center bg-coffee-900/90">
+                        <h3 class="text-xl font-display font-bold text-white tracking-widest uppercase">Your Roast List
+                        </h3>
+                        <button onclick="closeCartModal()" class="text-gray-500 hover:text-gold-500 transition-colors">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- STEP 1: ROAST LIST REVIEW -->
+                    <div id="roast-list-step" class="flex flex-col flex-1 min-h-0 overflow-hidden">
+                        <div class="flex-1 overflow-y-auto p-6 no-scrollbar" id="cart-items-container">
+                            <!-- Items injected here -->
+                        </div>
+
+                        <div class="flex-none p-6 border-t border-white/5 bg-coffee-900/90">
+                            <div class="flex justify-between items-end mb-6">
+                                <div>
+                                    <span
+                                        class="text-gold-500 text-xs uppercase tracking-widest font-bold block mb-1">Estimated
+                                        Total</span>
+                                    <span class="text-[10px] text-gray-500 italic">Excludes shipping & taxes</span>
+                                </div>
+                                <span id="cart-total-display"
+                                    class="text-4xl font-display font-bold text-white">$0.00</span>
+                            </div>
+                            <button onclick="showClientDetails()"
+                                class="w-full bg-gold-500 hover:bg-white text-coffee-900 font-bold py-4 rounded-sm shadow-lg uppercase tracking-widest transition-all transform hover:-translate-y-1 flex justify-center items-center gap-2 group text-sm">
+                                <span>Proceed to Details</span>
+                                <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: CLIENT DETAILS -->
+                    <div id="client-details-step" class="hidden flex-col flex-1 min-h-0 overflow-hidden">
+                        <div class="flex-none p-6 border-b border-white/5">
+                            <button onclick="showRoastList()"
+                                class="text-gold-500 hover:text-white text-xs uppercase tracking-widest font-bold flex items-center gap-2 mb-4 transition-colors">
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 19l-7-7 7-7" />
+                                </svg>
+                                Back to List
+                            </button>
+                            <h4 class="text-2xl font-display font-bold text-white">SHIPPING DETAILS</h4>
+                        </div>
+
+                        <div class="flex-1 overflow-y-auto p-6 no-scrollbar">
+                            <div class="space-y-4">
+                                <!-- Personal Info -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="client-name"
+                                            class="block text-[10px] font-bold text-gold-500 uppercase tracking-widest mb-2">Name
+                                            (Required)</label>
+                                        <input type="text" id="client-name" placeholder="Full Name"
+                                            class="w-full bg-transparent border-b border-white/20 rounded-none p-2 text-white placeholder-gray-600 focus:outline-none focus:border-gold-500 transition-colors font-serif text-lg">
+                                    </div>
+                                    <div>
+                                        <label for="client-phone"
+                                            class="block text-[10px] font-bold text-gold-500 uppercase tracking-widest mb-2">Phone</label>
+                                        <input type="tel" id="client-phone" placeholder="e.g. 403-555-0123"
+                                            class="w-full bg-transparent border-b border-white/20 rounded-none p-2 text-white placeholder-gray-600 focus:outline-none focus:border-gold-500 transition-colors font-serif text-lg">
+                                    </div>
+                                </div>
+
+                                <!-- Address -->
+                                <div>
+                                    <label for="client-address"
+                                        class="block text-[10px] font-bold text-gold-500 uppercase tracking-widest mb-2">Shipping
+                                        Address</label>
+                                    <input type="text" id="client-address" placeholder="Street Address"
+                                        class="w-full bg-transparent border-b border-white/20 rounded-none p-2 text-white placeholder-gray-600 focus:outline-none focus:border-gold-500 transition-colors font-serif text-lg">
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="client-city"
+                                            class="block text-[10px] font-bold text-gold-500 uppercase tracking-widest mb-2">City</label>
+                                        <input type="text" id="client-city" placeholder="City"
+                                            class="w-full bg-transparent border-b border-white/20 rounded-none p-2 text-white placeholder-gray-600 focus:outline-none focus:border-gold-500 transition-colors font-serif text-lg">
+                                    </div>
+                                    <div>
+                                        <label for="client-province"
+                                            class="block text-[10px] font-bold text-gold-500 uppercase tracking-widest mb-2">Province
+                                            / State</label>
+                                        <input type="text" id="client-province" placeholder="Province"
+                                            class="w-full bg-transparent border-b border-white/20 rounded-none p-2 text-white placeholder-gray-600 focus:outline-none focus:border-gold-500 transition-colors font-serif text-lg">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="client-country"
+                                            class="block text-[10px] font-bold text-gold-500 uppercase tracking-widest mb-2">Country</label>
+                                        <input type="text" id="client-country" placeholder="Country"
+                                            class="w-full bg-transparent border-b border-white/20 rounded-none p-2 text-white placeholder-gray-600 focus:outline-none focus:border-gold-500 transition-colors font-serif text-lg">
+                                    </div>
+                                    <div>
+                                        <label for="client-postal"
+                                            class="block text-[10px] font-bold text-gold-500 uppercase tracking-widest mb-2">Postal
+                                            / Zip</label>
+                                        <input type="text" id="client-postal" placeholder="Postal Code"
+                                            class="w-full bg-transparent border-b border-white/20 rounded-none p-2 text-white placeholder-gray-600 focus:outline-none focus:border-gold-500 transition-colors font-serif text-lg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex-none p-6 border-t border-white/10 bg-coffee-900/50">
+                            <p class="text-xs text-gray-500 mb-4 text-center italic">No payment required today. We will
+                                contact you to confirm details.</p>
+                            <button onclick="openConciergeHandoff()"
+                                class="w-full bg-gold-500 hover:bg-white text-coffee-900 font-bold py-4 rounded shadow-lg uppercase tracking-widest transition-all transform hover:-translate-y-1 flex justify-center items-center gap-2 group">
+                                <span>Request Roast</span>
+                                <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="email-options-modal" class="fixed inset-0 z-[110] hidden" aria-labelledby="modal-title" role="dialog"
+        aria-modal="true">
+        <div class="fixed inset-0 bg-black/90 backdrop-blur-sm transition-opacity opacity-0" id="email-backdrop"></div>
+        <div class="fixed inset-0 z-20 overflow-y-auto">
+            <div class="flex min-h-full items-center justify-center p-4">
+                <div class="relative transform overflow-hidden rounded-lg bg-coffee-800 text-left shadow-2xl transition-all sm:w-full sm:max-w-lg md:max-w-2xl border border-white/10 opacity-0 scale-95 h-[80vh] md:h-[90vh] flex flex-col"
+                    id="email-panel">
+
+                    <button onclick="closeEmailModal()"
+                        class="absolute right-4 top-4 text-gray-400 hover:text-white z-20">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+
+                    <div class="p-8 flex-1 overflow-y-auto no-scrollbar">
+                        <div class="text-center mb-6">
+                            <h3 class="text-xl font-display font-bold text-white">READY TO SEND?</h3>
+                            <p class="text-sm text-gray-400 mt-1">Here is the message we drafted for you.</p>
+                        </div>
+
+                        <div class="bg-white/10 rounded-lg p-4 mb-8 border border-white/10">
+                            <div class="flex items-center gap-2 mb-2 border-b border-white/10 pb-2">
+                                <span class="text-xs text-gray-400 uppercase font-bold">Subject:</span>
+                                <span class="text-xs text-white" id="email-preview-subject"></span>
+                            </div>
+                            <pre id="email-preview-body"
+                                class="text-sm text-gray-300 font-sans whitespace-pre-wrap leading-relaxed overflow-x-hidden font-normal"></pre>
+                        </div>
+
+                        <div class="space-y-3">
+                            <button onclick="sendDefault()"
+                                class="w-full bg-gold-500 hover:bg-white text-coffee-900 font-bold py-3 rounded flex items-center justify-center gap-3 transition-colors shadow-lg">
+                                <span>📱</span> Send via Default Mail App
+                            </button>
+                            <div class="grid grid-cols-2 gap-3">
+                                <button onclick="sendGmail()"
+                                    class="bg-white/10 hover:bg-white/20 text-white font-bold py-3 rounded flex items-center justify-center gap-2 transition-colors border border-white/10 text-sm">
+                                    <img src="assets/images/Icons/Gmail_Logo_512px.png" alt="Gmail"
+                                        class="w-5 h-5 object-contain">
+                                    Gmail
+                                </button>
+                                <button onclick="sendOutlook()"
+                                    class="bg-white/10 hover:bg-white/20 text-white font-bold py-3 rounded flex items-center justify-center gap-2 transition-colors border border-white/10 text-sm">
+                                    <img src="assets/images/Icons/Microsoft_Office_Outlook_(2018–2024).svg.png"
+                                        alt="Outlook" class="w-5 h-5 object-contain"> Outlook
+                                </button>
+                            </div>
+                            <button id="copy-text-btn" onclick="copyEmailText()"
+                                class="w-full bg-transparent text-gray-400 hover:text-white text-xs font-bold py-2 rounded flex items-center justify-center gap-2 transition-colors mt-2">
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                                </svg>
+                                Copy Text to Clipboard
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

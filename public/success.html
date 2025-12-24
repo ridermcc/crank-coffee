@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Success | Crank Custom Coffee</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coffee: { 900: '#1a1818', 800: '#2c2420', 600: '#6f4e37' },
+                        gold: { 500: '#c5a059' },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Oswald', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-coffee-900 text-white flex items-center justify-center min-h-screen">
+    <div class="text-center max-w-lg px-4">
+        <div class="w-24 h-24 bg-gold-500 rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg">
+            <svg class="w-12 h-12 text-coffee-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+            </svg>
+        </div>
+        <h1 class="font-display font-bold text-5xl mb-4">ORDER RECEIVED</h1>
+        <p class="font-serif text-xl text-gray-300 mb-8">
+            Thank you for your order. We will fire up the roaster shortly.
+        </p>
+        <p class="text-gray-400 mb-12">
+            You will receive a confirmation email with your order details.
+        </p>
+        <a href="index.html"
+            class="inline-block bg-gold-500 hover:bg-white text-coffee-900 font-bold py-4 px-10 rounded uppercase tracking-widest transition-colors shadow-lg">
+            Back to Home
+        </a>
+    </div>
+    <script>
+        // Clear the cart on success
+        localStorage.removeItem('crankRoastBrief');
+    </script>
+</body>
+
+</html>
