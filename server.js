@@ -5,7 +5,13 @@ const app = express();
 const path = require('path');
 
 // Serve static files from the "public" directory
-app.use(express.static('public'));
+// Serve static files from the "public" directory
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Explicitly serve index.html for root
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 app.use(express.json());
 
 // --- PRODUCT CATALOG (Single Source of Truth) ---
