@@ -218,10 +218,10 @@ function renderRoastedMenu() {
                 </div>
 
                 <div class="flex-1 w-full">
-                    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 mb-4">
+                    <div class="flex flex-row justify-between items-start gap-4 mb-4">
                         <div>
                             <span class="text-gold-500 text-[10px] font-bold font-mono tracking-widest uppercase mb-1 block">Log No. 00${index + 1}</span>
-                            <h4 class="font-display font-bold text-3xl text-white tracking-wide group-hover:text-gold-500 transition-colors">
+                            <h4 class="font-display font-bold text-xl md:text-3xl text-white tracking-wide group-hover:text-gold-500 transition-colors">
                                 ${product.name.toUpperCase()}
                             </h4>
                             <div class="text-xs text-gray-400 font-mono mt-1 uppercase tracking-wider">
@@ -348,9 +348,9 @@ function renderGreenBeansMenu() {
                 </div>
 
                 <div class="flex-1 w-full">
-                    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 mb-4">
+                    <div class="flex flex-row justify-between items-start gap-4 mb-4">
                         <div>
-                            <h4 class="font-display font-bold text-3xl text-white tracking-wide group-hover:text-gold-500 transition-colors">
+                            <h4 class="font-display font-bold text-xl md:text-3xl text-white tracking-wide group-hover:text-gold-500 transition-colors">
                                 ${product.name.replace('Green ', '').toUpperCase()}
                             </h4>
                             <div class="text-xs text-gray-400 font-mono mt-1 uppercase tracking-wider">
