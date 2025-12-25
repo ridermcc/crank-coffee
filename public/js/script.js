@@ -37,7 +37,8 @@ const roastedProducts = [
         description: 'A bold espresso blend designed for rich crema and low acidity. Perfect for lattes or straight shots.',
         image: 'assets/images/Product_Images/Roasted_Bags/Full-Crank-Espresso-Blend.webp',
         flag: '🇨🇦',
-        mood: 'dark'
+        mood: 'dark',
+        bags: 4
     },
     {
         name: 'Half Crank Espresso',
@@ -47,7 +48,8 @@ const roastedProducts = [
         description: 'The best of both worlds. A 50/50 blend of our Full Crank Espresso and Swiss Water Decaf.',
         image: 'assets/images/Product_Images/Roasted_Bags/Half-Crank-Espresso-Blend.webp',
         flag: '🇨🇦',
-        mood: 'balanced'
+        mood: 'balanced',
+        bags: 4
     },
     {
         name: 'Colombia Excelso Organic',
@@ -228,9 +230,9 @@ function renderRoastedMenu() {
                         </div>
                         <div class="text-right">
                             <div class="font-display font-bold text-2xl text-gold-500 whitespace-nowrap">
-                                $50 <span class="text-sm text-gray-500 font-sans font-normal">CAD</span>
+                                $${product.price * (product.bags || 2)} <span class="text-sm text-gray-500 font-sans font-normal">CAD</span>
                             </div>
-                            <div class="text-[10px] text-gray-400 uppercase tracking-widest">Per 2-Bag Set</div>
+                            <div class="text-[10px] text-gray-400 uppercase tracking-widest">Per ${product.bags || 2}-Bag Set</div>
                         </div>
                     </div>
 
@@ -251,7 +253,7 @@ function renderRoastedMenu() {
 
                         <div class="flex items-center gap-3">
                             <div class="flex flex-col items-center">
-                                <label class="text-[10px] text-gray-500 uppercase font-bold mb-1">Sets (2 Bags)</label>
+                                <label class="text-[10px] text-gray-500 uppercase font-bold mb-1">Sets (${product.bags || 2} Bags)</label>
                                 <div class="flex items-center border border-white/20 rounded-sm bg-coffee-900/50">
                                     <button onclick="window.adjustMenuQty(${index}, -1)" 
                                         class="w-8 h-8 flex items-center justify-center hover:bg-white/10 text-gold-500 text-lg font-bold transition-colors">-</button>
@@ -293,15 +295,16 @@ function quickAdd(index) {
     const qtyInput = document.getElementById(`qty-input-${index}`);
     const qty = qtyInput ? parseInt(qtyInput.value) : 1;
 
-    // Price is $50 per set (2 bags)
-    const setPrice = 50;
+    // Price is per set
+    const bags = product.bags || 2;
+    const setPrice = product.price * bags;
 
     const requestItem = {
         id: Date.now(),
         name: product.name,
         roast: selectedRoast,
         qty: qty,
-        unit: 'sets (2 bags)',
+        unit: `sets (${bags} bags)`,
         unitPrice: setPrice,
         totalPrice: setPrice * qty,
         image: product.image
