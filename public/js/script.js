@@ -32,7 +32,7 @@ const roastedProducts = [
     {
         name: 'Full Crank Espresso',
         price: 25,
-        origin: 'Blend (Colombia / Ethiopia / India)',
+        origin: 'Colombia, Ethiopia, India',
         roast: 'Dark',
         description: 'A bold espresso blend designed for rich crema and low acidity. Perfect for lattes or straight shots.',
         image: 'assets/images/Product_Images/Roasted_Bags/Full-Crank-Espresso-Blend.webp',
@@ -43,7 +43,7 @@ const roastedProducts = [
     {
         name: 'Half Crank Espresso',
         price: 25,
-        origin: 'Blend (Colombia / Brazil / Ethiopia / Indonesia)',
+        origin: 'Colombia, Brazil, Ethiopia, Indonesia',
         roast: 'Medium-Dark',
         description: 'The best of both worlds. A 50/50 blend of our Full Crank Espresso and Swiss Water Decaf.',
         image: 'assets/images/Product_Images/Roasted_Bags/Half-Crank-Espresso-Blend.webp',
@@ -84,7 +84,7 @@ const roastedProducts = [
     {
         name: 'Swiss Water Decaf',
         price: 25,
-        origin: 'Blend (Brazil / Ethiopia / Indonesia)',
+        origin: 'Brazil, Ethiopia, Indonesia',
         roast: 'Medium',
         description: 'Chemical-free decaffeination process that retains the full flavor of the bean. Smooth and clean.',
         image: 'assets/images/Product_Images/Roasted_Bags/Swiss-Water-Decaf-Coffee.webp',
