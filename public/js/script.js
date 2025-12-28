@@ -171,23 +171,30 @@ function initUI() {
 
     window.addEventListener('scroll', () => {
         const nav = document.getElementById('navbar');
+        const navContainer = document.getElementById('navbar-container');
         const logo = document.getElementById('nav-logo');
 
-        if (nav && logo) {
+        if (nav && logo && navContainer) {
             if (window.scrollY > 50) {
                 // Scrolled down state
                 nav.classList.remove('bg-transparent');
                 nav.classList.add('bg-coffee-900/90', 'backdrop-blur-md', 'border-b', 'border-white/5', 'shadow-lg');
 
-                logo.classList.remove('h-20');
+                navContainer.classList.remove('h-28');
+                navContainer.classList.add('h-16');
+
+                logo.classList.remove('h-24');
                 logo.classList.add('h-12');
             } else {
                 // Top state
                 nav.classList.add('bg-transparent');
                 nav.classList.remove('bg-coffee-900/90', 'backdrop-blur-md', 'border-b', 'border-white/5', 'shadow-lg');
 
+                navContainer.classList.remove('h-16');
+                navContainer.classList.add('h-28');
+
                 logo.classList.remove('h-12');
-                logo.classList.add('h-20');
+                logo.classList.add('h-24');
             }
         }
     });

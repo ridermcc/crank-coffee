@@ -24,13 +24,13 @@
 
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <a href="#" class="flex-shrink-0 flex items-center gap-3 group">
+            <div id="navbar-container" class="flex justify-between items-center h-28 transition-all duration-300">
+                <a href="#" class="flex-shrink-0 flex items-center gap-3 group relative z-20">
                     <img id="nav-logo" src="assets/images/Logo/logg-white.png" alt="Crank Logo"
-                        class="h-20 w-auto transition-all duration-300 group-hover:rotate-12">
+                        class="h-24 w-auto transition-all duration-300 group-hover:rotate-12">
                 </a>
 
-                <div class="hidden md:flex space-x-8 items-center">
+                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-8 items-center">
                     <a href="#menu"
                         class="text-sm font-medium hover:text-gold-500 transition-colors tracking-wide">COFFEE</a>
                     <a href="#custom-labelling"
@@ -39,6 +39,9 @@
                         class="text-sm font-medium hover:text-gold-500 transition-colors tracking-wide">ABOUT</a>
                     <a href="#contact"
                         class="text-sm font-medium hover:text-gold-500 transition-colors tracking-wide">CONTACT</a>
+                </div>
+
+                <div class="hidden md:flex items-center relative z-20">
                     <a href="#" onclick="openCartModal(); return false;"
                         class="bg-gold-500 text-coffee-900 hover:bg-white px-5 py-2 rounded-sm font-display font-bold tracking-wider transition-all transform hover:-translate-y-0.5">
                         MY ROAST LIST
