@@ -231,8 +231,8 @@ function renderRoastedMenu() {
                 product.roast.includes('Medium') ? 'Medium' : "Roaster's Choice";
 
         return `
-        <div class="relative group border-b border-white/10 pb-12 mb-4 last:border-0">
-            <div class="flex flex-col md:flex-row gap-8 lg:gap-12 items-start">
+        <div class="relative group border-b border-white/10 pb-12 mb-12 last:border-0">
+            <div class="flex flex-col md:flex-row gap-8 lg:gap-12 items-stretch">
                 
                 <div class="w-full md:w-48 lg:w-56 flex-shrink-0 relative">
                     <div class="absolute -inset-2 bg-white/5 rounded-sm transform -rotate-2"></div>
@@ -240,11 +240,10 @@ function renderRoastedMenu() {
                          class="relative w-full h-64 md:h-auto object-cover rounded-sm shadow-xl grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500 border border-white/10">
                 </div>
 
-                <div class="flex-1 w-full">
+                <div class="flex-1 w-full flex flex-col justify-between">
                     <div class="flex flex-row justify-between items-start gap-4 mb-4">
                         <div>
-                            <span class="text-gold-500 text-[10px] font-bold font-mono tracking-widest uppercase mb-1 block">Log No. 00${index + 1}</span>
-                            <h4 class="font-display font-bold text-xl md:text-3xl text-white tracking-wide group-hover:text-gold-500 transition-colors">
+                            <h4 class="font-display font-bold text-xl md:text-3xl text-white tracking-wide">
                                 ${product.name.toUpperCase()}
                             </h4>
                             <div class="text-xs text-gray-400 font-mono mt-1 uppercase tracking-wider">
@@ -361,8 +360,8 @@ function renderGreenBeansMenu() {
 
     grid.innerHTML = greenBeanProducts.map((product, index) => {
         return `
-        <div class="relative group border-b border-white/10 pb-12 mb-4 last:border-0">
-            <div class="flex flex-col md:flex-row gap-8 lg:gap-12 items-start">
+        <div class="relative group border-b border-white/10 pb-12 mb-12 last:border-0">
+            <div class="flex flex-col md:flex-row gap-8 lg:gap-12 items-stretch">
                 
                 <div class="w-full md:w-48 lg:w-56 flex-shrink-0 relative">
                     <div class="absolute -inset-2 bg-white/5 rounded-sm transform -rotate-2"></div>
@@ -370,7 +369,7 @@ function renderGreenBeansMenu() {
                          class="relative w-full h-64 md:h-auto object-cover rounded-sm shadow-xl grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500 border border-white/10">
                 </div>
 
-                <div class="flex-1 w-full">
+                <div class="flex-1 w-full flex flex-col justify-between">
                     <div class="flex flex-row justify-between items-start gap-4 mb-4">
                         <div>
                             <h4 class="font-display font-bold text-xl md:text-3xl text-white tracking-wide group-hover:text-gold-500 transition-colors">
