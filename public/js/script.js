@@ -259,7 +259,7 @@ function renderRoastedMenu() {
                         </div>
                     </div>
 
-                    <p class="text-gray-300 font-serif italic text-lg leading-relaxed opacity-90 mb-6 max-w-2xl">
+                    <p class="text-gray-300 font-serif text-lg leading-relaxed opacity-90 mb-6 max-w-2xl">
                         "${product.description}"
                     </p>
 
@@ -388,7 +388,7 @@ function renderGreenBeansMenu() {
                         </div>
                     </div>
 
-                    <p class="text-gray-300 font-serif italic text-lg leading-relaxed opacity-90 mb-6 max-w-2xl">
+                    <p class="text-gray-300 font-serif text-lg leading-relaxed opacity-90 mb-6 max-w-2xl">
                         "${product.description}"
                     </p>
 
@@ -783,7 +783,7 @@ function renderCartItems() {
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                     </svg>
                 </div>
-                <p class="text-gray-500 text-lg font-serif italic">Your roast list is empty.</p>
+                <p class="text-gray-500 text-lg font-serif">Your roast list is empty.</p>
                 <button onclick="closeCartModal()" class="text-gold-500 hover:text-white text-xs uppercase tracking-widest font-bold transition-colors">
                     Browse the Menu
                 </button>
