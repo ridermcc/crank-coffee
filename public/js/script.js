@@ -372,7 +372,7 @@ function renderGreenBeansMenu() {
                 <div class="flex-1 w-full flex flex-col justify-between">
                     <div class="flex flex-row justify-between items-start gap-4 mb-4">
                         <div>
-                            <h4 class="font-display font-bold text-xl md:text-3xl text-white tracking-wide group-hover:text-gold-500 transition-colors">
+                            <h4 class="font-display font-bold text-xl md:text-3xl text-white tracking-wide transition-colors">
                                 ${product.name.replace('Green ', '').toUpperCase()}
                             </h4>
                             <div class="text-xs text-gray-400 font-mono mt-1 uppercase tracking-wider">
