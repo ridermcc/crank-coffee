@@ -35,7 +35,7 @@ const roastedProducts = [
         origin: 'Colombia, Ethiopia, India',
         roast: 'Dark',
         description: 'A bold espresso blend designed for rich crema and low acidity. Perfect for lattes or straight shots.',
-        image: 'assets/images/Product_Images/Roasted_Bags/Full-Crank-Espresso-Blend.webp',
+        image: 'assets/images/Product_Images/Roasted_Bags/full-crank.webp',
         flag: '🇨🇦',
         mood: 'dark',
         bags: 4
@@ -46,7 +46,7 @@ const roastedProducts = [
         origin: 'Colombia, Brazil, Ethiopia, Indonesia',
         roast: 'Medium-Dark',
         description: 'The best of both worlds. A 50/50 blend of our Full Crank Espresso and Swiss Water Decaf.',
-        image: 'assets/images/Product_Images/Roasted_Bags/Half-Crank-Espresso-Blend.webp',
+        image: 'assets/images/Product_Images/Roasted_Bags/half-crank.webp',
         flag: '🇨🇦',
         mood: 'balanced',
         bags: 4
@@ -57,7 +57,7 @@ const roastedProducts = [
         origin: 'Colombia',
         roast: 'Medium',
         description: 'A classic Colombian coffee. Balanced acidity, sweet caramel notes, and a clean finish. Certified Organic.',
-        image: 'assets/images/Product_Images/Roasted_Bags/Colombia-Excelso-Organic-Coffee.webp',
+        image: 'assets/images/Product_Images/Roasted_Bags/colombia-excelso.webp',
         flag: '🇨🇴',
         mood: 'balanced'
     },
@@ -67,7 +67,7 @@ const roastedProducts = [
         origin: 'Ethiopia',
         roast: 'Light-Medium',
         description: 'Renowned for its bright acidity and complex floral and berry notes. A tea-like body that is truly unique.',
-        image: 'assets/images/Product_Images/Roasted_Bags/Ethiopia-Yergacheffe-Coffee.webp',
+        image: 'assets/images/Product_Images/Roasted_Bags/ethiopia-yergacheffe.webp',
         flag: '🇪🇹',
         mood: 'bright'
     },
@@ -77,7 +77,7 @@ const roastedProducts = [
         origin: 'India',
         roast: 'Dark',
         description: 'A unique coffee exposed to monsoon winds. Extremely low acidity with heavy body and spicy, earthy notes.',
-        image: 'assets/images/Product_Images/Roasted_Bags/India-Monsoon-Malabar-Coffee.webp',
+        image: 'assets/images/Product_Images/Roasted_Bags/india-monsoon.webp',
         flag: '🇮🇳',
         mood: 'dark'
     },
@@ -87,7 +87,7 @@ const roastedProducts = [
         origin: 'Brazil, Ethiopia, Indonesia',
         roast: 'Medium',
         description: 'Chemical-free decaffeination process that retains the full flavor of the bean. Smooth and clean.',
-        image: 'assets/images/Product_Images/Roasted_Bags/Swiss-Water-Decaf-Coffee.webp',
+        image: 'assets/images/Product_Images/Roasted_Bags/swiss-water-decaf.webp',
         flag: '🇨🇦',
         mood: 'balanced'
     }
