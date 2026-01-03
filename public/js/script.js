@@ -784,7 +784,7 @@ function renderCartItems() {
                 </div>
                 <p class="text-gray-500 text-lg font-serif">Your roast list is empty.</p>
                 <button onclick="closeCartModal()" class="text-gold-500 hover:text-white text-xs uppercase tracking-widest font-bold transition-colors">
-                    Browse the Menu
+                    <a href="#menu">Browse the Menu</a>
                 </button>
             </div>
         `;
