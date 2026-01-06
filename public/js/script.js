@@ -262,7 +262,7 @@ function renderRoastedMenu() {
                         "${product.description}"
                     </p>
 
-                    <div class="flex flex-col sm:flex-row items-end sm:items-center gap-4 bg-white/5 p-4 rounded-sm border border-white/5">
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 bg-white/5 p-4 rounded-sm border border-white/5">
                         
                         <div class="w-full sm:w-auto flex-1">
                             <label class="block text-[10px] text-gray-500 uppercase font-bold mb-1">Requested Roast Profile</label>
@@ -273,21 +273,21 @@ function renderRoastedMenu() {
 
                         <div class="h-8 w-px bg-white/10 hidden sm:block"></div>
 
-                        <div class="flex items-center gap-3">
-                            <div class="flex flex-col items-center">
-                                <label class="text-[10px] text-gray-500 uppercase font-bold mb-1">Sets (${product.bags || 2} Bags)</label>
-                                <div class="flex items-center border border-white/20 rounded-sm bg-coffee-900/50">
+                        <div class="flex items-end gap-3 w-full sm:w-auto">
+                            <div class="flex-shrink-0">
+                                <label class="block text-[10px] text-gray-500 uppercase font-bold mb-1 text-center">Sets (${product.bags || 2} Bags)</label>
+                                <div class="flex items-center border border-white/20 rounded-sm bg-coffee-900/50 h-11">
                                     <button onclick="window.adjustMenuQty(${index}, -1)" 
-                                        class="w-8 h-8 flex items-center justify-center hover:bg-white/10 text-gold-500 text-lg font-bold transition-colors">-</button>
+                                        class="w-8 h-full flex items-center justify-center hover:bg-white/10 text-gold-500 text-lg font-bold transition-colors">-</button>
                                     <input id="qty-input-${index}" type="number" value="1" readonly 
                                         class="w-8 bg-transparent text-center text-white font-bold focus:outline-none text-sm">
                                     <button onclick="window.adjustMenuQty(${index}, 1)" 
-                                        class="w-8 h-8 flex items-center justify-center hover:bg-white/10 text-gold-500 text-lg font-bold transition-colors">+</button>
+                                        class="w-8 h-full flex items-center justify-center hover:bg-white/10 text-gold-500 text-lg font-bold transition-colors">+</button>
                                 </div>
                             </div>
 
                             <button id="add-btn-${index}" onclick="window.quickAdd(${index})" 
-                                class="bg-gold-500 hover:bg-white text-coffee-900 font-bold px-6 py-3 rounded-sm uppercase tracking-widest text-xs transition-all shadow-lg whitespace-nowrap h-full self-end">
+                                class="flex-1 sm:flex-none bg-gold-500 hover:bg-white text-coffee-900 font-bold px-6 rounded-sm uppercase tracking-widest text-xs transition-all shadow-lg whitespace-nowrap h-11 flex items-center justify-center">
                                 Add to List
                             </button>
                         </div>
@@ -391,27 +391,27 @@ function renderGreenBeansMenu() {
                         "${product.description}"
                     </p>
 
-                    <div class="flex flex-col sm:flex-row items-end sm:items-center gap-4 bg-white/5 p-4 rounded-sm border border-white/5">
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 bg-white/5 p-4 rounded-sm border border-white/5">
                         
-                        <div class="flex-1">
+                        <div class="w-full sm:w-auto flex-1">
                             <span class="text-gold-500 font-bold text-sm uppercase tracking-wider">Raw Green Bean</span>
                         </div>
 
-                        <div class="flex items-center gap-3">
-                            <div class="flex flex-col items-center">
-                                <label class="text-[10px] text-gray-500 uppercase font-bold mb-1">Quantity (lbs)</label>
-                                <div class="flex items-center border border-white/20 rounded-sm bg-coffee-900/50">
+                        <div class="flex items-end gap-3 w-full sm:w-auto">
+                            <div class="flex-shrink-0">
+                                <label class="block text-[10px] text-gray-500 uppercase font-bold mb-1 text-center">Quantity (lbs)</label>
+                                <div class="flex items-center border border-white/20 rounded-sm bg-coffee-900/50 h-11">
                                     <button onclick="window.adjustGreenQty(${index}, -1)" 
-                                        class="w-8 h-8 flex items-center justify-center hover:bg-white/10 text-gold-500 text-lg font-bold transition-colors">-</button>
+                                        class="w-8 h-full flex items-center justify-center hover:bg-white/10 text-gold-500 text-lg font-bold transition-colors">-</button>
                                     <input id="green-qty-input-${index}" type="number" value="1" readonly 
                                         class="w-8 bg-transparent text-center text-white font-bold focus:outline-none text-sm">
                                     <button onclick="window.adjustGreenQty(${index}, 1)" 
-                                        class="w-8 h-8 flex items-center justify-center hover:bg-white/10 text-gold-500 text-lg font-bold transition-colors">+</button>
+                                        class="w-8 h-full flex items-center justify-center hover:bg-white/10 text-gold-500 text-lg font-bold transition-colors">+</button>
                                 </div>
                             </div>
 
                             <button id="green-add-btn-${index}" onclick="window.quickAddGreen(${index})" 
-                                class="bg-gold-500 hover:bg-white text-coffee-900 font-bold px-6 py-3 rounded-sm uppercase tracking-widest text-xs transition-all shadow-lg whitespace-nowrap h-full self-end">
+                                class="flex-1 sm:flex-none bg-gold-500 hover:bg-white text-coffee-900 font-bold px-6 rounded-sm uppercase tracking-widest text-xs transition-all shadow-lg whitespace-nowrap h-11 flex items-center justify-center">
                                 Add to List
                             </button>
                         </div>
