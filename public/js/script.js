@@ -241,16 +241,16 @@ function renderRoastedMenu() {
                 </div>
 
                 <div class="flex-1 w-full flex flex-col justify-between">
-                    <div class="flex flex-row justify-between items-start gap-4 mb-4">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 md:gap-4 mb-4">
                         <div>
-                            <h4 class="font-display font-bold text-xl md:text-3xl text-white tracking-wide">
+                            <h4 class="font-display font-bold text-xl md:text-3xl text-white tracking-wide transition-colors">
                                 ${product.name.toUpperCase()}
                             </h4>
                             <div class="text-xs text-gray-400 font-mono mt-1 uppercase tracking-wider">
                                 Origin: <span class="text-gray-300">${product.origin}</span>
                             </div>
                         </div>
-                        <div class="text-right">
+                        <div class="text-left md:text-right mt-2 md:mt-0">
                             <div class="font-display font-bold text-2xl text-gold-500 whitespace-nowrap">
                                 $${product.price * (product.bags || 2)} <span class="text-sm text-gray-500 font-sans font-normal">CAD</span>
                             </div>
@@ -370,7 +370,7 @@ function renderGreenBeansMenu() {
                 </div>
 
                 <div class="flex-1 w-full flex flex-col justify-between">
-                    <div class="flex flex-row justify-between items-start gap-4 mb-4">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 md:gap-4 mb-4">
                         <div>
                             <h4 class="font-display font-bold text-xl md:text-3xl text-white tracking-wide transition-colors">
                                 ${product.name.replace('Green ', '').toUpperCase()}
@@ -379,7 +379,7 @@ function renderGreenBeansMenu() {
                                 Origin: <span class="text-gray-300">${product.origin}</span>
                             </div>
                         </div>
-                        <div class="text-right">
+                        <div class="text-left md:text-right mt-2 md:mt-0">
                             <div class="font-display font-bold text-2xl text-gold-500 whitespace-nowrap">
                                 $${product.price} <span class="text-sm text-gray-500 font-sans font-normal">CAD</span>
                             </div>
