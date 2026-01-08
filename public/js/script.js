@@ -573,7 +573,7 @@ window.addCustomBlendToBrief = () => {
         unit: 'sets (4 bags)',
         unitPrice: 100,
         totalPrice: 100 * state.customBlendQty,
-        image: 'assets/images/Product_Images/Roasted_Bags/Custom-Crank-Coffee-Blend.webp'
+        image: 'assets/images/Product_Images/Roasted_Bags/full-crank.webp'
     };
 
     state.roastBrief.push(requestItem);
@@ -737,13 +737,17 @@ function updateBriefUI() {
     }
 }
 
-function openCartModal() {
+function openCartModal(startStep = 'list') {
     const modal = document.getElementById('cart-modal');
     const panel = document.getElementById('cart-panel');
     const backdrop = document.getElementById('cart-backdrop');
 
-    // Reset to first step
-    showRoastList();
+    // Reset to first step or specified step
+    if (startStep === 'details') {
+        showClientDetails();
+    } else {
+        showRoastList();
+    }
 
     renderCartItems();
     modal.classList.remove('hidden');
@@ -920,6 +924,7 @@ function getEmailContent() {
     state.roastBrief.forEach((item) => {
         grandTotal += item.totalPrice;
         body += `[${item.qty}x] ${item.name}\n`;
+        body += `      Unit: ${item.unit}\n`;
         body += `      Roast: ${item.roast}\n`;
         if (item.blend) body += `      Blend: ${item.blend}\n`;
         body += `      Price: $${item.totalPrice}\n`;

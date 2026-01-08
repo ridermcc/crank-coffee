@@ -92,7 +92,7 @@
                 MICRO-ROAST COFFEE<br><span class="text-gold-500">CRAFTED FOR YOU</span>
             </h1>
             <p class="text-lg md:text-2xl text-gray-200 font-serif mb-10 max-w-2xl mx-auto text-shadow-sm">
-                We don't roast for shelves. We roast for you. Build your list, and we will fire up the roaster.
+                We don't roast for shelves. We roast for you. Select your roasts, and we do the rest.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#menu"
@@ -721,13 +721,13 @@
                                             class="block text-[10px] font-bold text-gold-500 uppercase tracking-widest mb-2">Name
                                             (Required)</label>
                                         <input type="text" id="client-name" placeholder="Full Name"
-                                            class="w-full bg-transparent border-b border-white/20 rounded-none p-2 text-white placeholder-gray-600 focus:outline-none focus:border-gold-500 transition-colors font-serif text-lg">
+                                            class="w-full bg-transparent border-b border-white/20 rounded-none p-2 text-white placeholder-gray-600 focus:outline-none focus:border-gold-500 transition-colors font-sans text-lg">
                                     </div>
                                     <div>
                                         <label for="client-phone"
                                             class="block text-[10px] font-bold text-gold-500 uppercase tracking-widest mb-2">Phone</label>
                                         <input type="tel" id="client-phone" placeholder="e.g. 403-555-0123"
-                                            class="w-full bg-transparent border-b border-white/20 rounded-none p-2 text-white placeholder-gray-600 focus:outline-none focus:border-gold-500 transition-colors font-serif text-lg">
+                                            class="w-full bg-transparent border-b border-white/20 rounded-none p-2 text-white placeholder-gray-600 focus:outline-none focus:border-gold-500 transition-colors font-sans text-lg">
                                     </div>
                                 </div>
 
@@ -737,7 +737,7 @@
                                         class="block text-[10px] font-bold text-gold-500 uppercase tracking-widest mb-2">Shipping
                                         Address</label>
                                     <input type="text" id="client-address" placeholder="Street Address"
-                                        class="w-full bg-transparent border-b border-white/20 rounded-none p-2 text-white placeholder-gray-600 focus:outline-none focus:border-gold-500 transition-colors font-serif text-lg">
+                                        class="w-full bg-transparent border-b border-white/20 rounded-none p-2 text-white placeholder-gray-600 focus:outline-none focus:border-gold-500 transition-colors font-sans text-lg">
                                 </div>
 
                                 <div class="grid grid-cols-2 gap-4">
@@ -745,14 +745,14 @@
                                         <label for="client-city"
                                             class="block text-[10px] font-bold text-gold-500 uppercase tracking-widest mb-2">City</label>
                                         <input type="text" id="client-city" placeholder="City"
-                                            class="w-full bg-transparent border-b border-white/20 rounded-none p-2 text-white placeholder-gray-600 focus:outline-none focus:border-gold-500 transition-colors font-serif text-lg">
+                                            class="w-full bg-transparent border-b border-white/20 rounded-none p-2 text-white placeholder-gray-600 focus:outline-none focus:border-gold-500 transition-colors font-sans text-lg">
                                     </div>
                                     <div>
                                         <label for="client-province"
                                             class="block text-[10px] font-bold text-gold-500 uppercase tracking-widest mb-2">Province
                                             / State</label>
                                         <input type="text" id="client-province" placeholder="Province"
-                                            class="w-full bg-transparent border-b border-white/20 rounded-none p-2 text-white placeholder-gray-600 focus:outline-none focus:border-gold-500 transition-colors font-serif text-lg">
+                                            class="w-full bg-transparent border-b border-white/20 rounded-none p-2 text-white placeholder-gray-600 focus:outline-none focus:border-gold-500 transition-colors font-sans text-lg">
                                     </div>
                                 </div>
 
@@ -761,14 +761,14 @@
                                         <label for="client-country"
                                             class="block text-[10px] font-bold text-gold-500 uppercase tracking-widest mb-2">Country</label>
                                         <input type="text" id="client-country" placeholder="Country"
-                                            class="w-full bg-transparent border-b border-white/20 rounded-none p-2 text-white placeholder-gray-600 focus:outline-none focus:border-gold-500 transition-colors font-serif text-lg">
+                                            class="w-full bg-transparent border-b border-white/20 rounded-none p-2 text-white placeholder-gray-600 focus:outline-none focus:border-gold-500 transition-colors font-sans text-lg">
                                     </div>
                                     <div>
                                         <label for="client-postal"
                                             class="block text-[10px] font-bold text-gold-500 uppercase tracking-widest mb-2">Postal
                                             / Zip</label>
                                         <input type="text" id="client-postal" placeholder="Postal Code"
-                                            class="w-full bg-transparent border-b border-white/20 rounded-none p-2 text-white placeholder-gray-600 focus:outline-none focus:border-gold-500 transition-colors font-serif text-lg">
+                                            class="w-full bg-transparent border-b border-white/20 rounded-none p-2 text-white placeholder-gray-600 focus:outline-none focus:border-gold-500 transition-colors font-sans text-lg">
                                     </div>
                                 </div>
                             </div>
@@ -807,6 +807,14 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M6 18L18 6M6 6l12 12" />
                         </svg>
+                    </button>
+
+                    <button onclick="closeEmailModal(); openCartModal('details')"
+                        class="absolute left-4 top-4 text-gray-400 hover:text-white z-20 flex items-center gap-1 text-xs font-bold uppercase tracking-widest transition-colors">
+                        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                        Back
                     </button>
 
                     <div class="p-8 flex-1 overflow-y-auto no-scrollbar">
