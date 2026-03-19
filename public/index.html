@@ -79,8 +79,7 @@
                 <a href="#about" class="block px-3 py-2 text-base font-medium hover:text-gold-500">About</a>
                 <a href="#contact" class="block px-3 py-2 text-base font-medium hover:text-gold-500">Contact</a>
                 <a href="#" onclick="openCartModal(); return false;"
-                    class="block px-3 py-3 mt-4 text-center font-bold bg-gold-500 text-coffee-900 rounded-sm">MY ROAST
-                    LIST</a>
+                    class="block px-3 py-3 mt-4 text-center font-bold bg-gold-500 text-coffee-900 rounded-sm">MY CART</a>
             </div>
         </div>
     </nav>
@@ -523,7 +522,7 @@
     <section id="review-prompt"
         class="hidden py-16 bg-gold-500 text-coffee-900 border-t border-coffee-900/5 relative overflow-hidden transition-all duration-500">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h3 class="font-display font-bold text-3xl md:text-4xl mb-4">YOUR ROAST LIST IS READY</h3>
+            <h3 class="font-display font-bold text-3xl md:text-4xl mb-4">YOUR CART IS READY</h3>
             <p class="font-serif text-lg md:text-xl text-coffee-800 mb-8 max-w-2xl mx-auto">
                 You have added items to your list. Review your selection and submit your request to get the roaster
                 fired up.
@@ -535,13 +534,14 @@
         </div>
     </section>
 
-    <footer class="bg-black text-gray-500 py-6 border-t border-white/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+    <footer class="bg-black text-gray-500 py-16 md:py-24 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0">
             <div class="flex items-center gap-3">
                 <img src="assets/images/Logo/logg-white.png" alt="Logo"
                     class="h-10 opacity-50 grayscale hover:grayscale-0 transition-all">
             </div>
-            <div class="text-sm">
+            <div class="text-sm text-center md:text-right">
+                <p class="mb-2 text-xs opacity-75 max-w-sm mx-auto md:mx-0 md:ml-auto">Prices on this site are subject to change based on fluctuations in world coffee market prices.</p>
                 &copy; 2025 Calgary, Alberta. All rights reserved.
             </div>
         </div>
@@ -648,7 +648,7 @@
                             <div class="mt-8 pt-6 border-t border-white/10">
                                 <button id="modal-add-btn" onclick="addToBrief()"
                                     class="block w-full text-center bg-gold-500 hover:bg-white hover:text-coffee-900 text-coffee-900 font-bold py-3 rounded transition-colors uppercase tracking-widest shadow-lg">
-                                    Add to List
+                                    Add to Cart
                                 </button>
                             </div>
                         </div>
@@ -668,7 +668,7 @@
 
                     <div
                         class="flex-none p-6 border-b border-white/5 flex justify-between items-center bg-coffee-900/90">
-                        <h3 class="text-xl font-display font-bold text-white tracking-widest uppercase">Your Roast List
+                        <h3 class="text-xl font-display font-bold text-white tracking-widest uppercase">Your Cart
                         </h3>
                         <button onclick="closeCartModal()" class="text-gray-500 hover:text-gold-500 transition-colors">
                             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -690,7 +690,7 @@
                                     <span
                                         class="text-gold-500 text-xs uppercase tracking-widest font-bold block mb-1">Estimated
                                         Total</span>
-                                    <span class="text-[10px] text-gray-500 italic">Excludes shipping & taxes</span>
+                                    <span class="text-[10px] text-gray-500 italic">Excludes shipping</span>
                                 </div>
                                 <span id="cart-total-display"
                                     class="text-4xl font-display font-bold text-white">$0.00</span>
