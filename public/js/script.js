@@ -63,7 +63,7 @@ const roastedProducts = [
     },
     {
         name: 'Ethiopia Yergacheffe',
-        price: 25,
+        price: 17,
         origin: 'Ethiopia',
         roast: 'Light-Medium',
         description: 'Renowned for its bright acidity and complex floral and berry notes. A tea-like body that is truly unique.',
@@ -73,7 +73,7 @@ const roastedProducts = [
     },
     {
         name: 'India Monsoon Malabar',
-        price: 25,
+        price: 30,
         origin: 'India',
         roast: 'Dark',
         description: 'A unique coffee exposed to monsoon winds. Extremely low acidity with heavy body and spicy, earthy notes.',
@@ -83,7 +83,7 @@ const roastedProducts = [
     },
     {
         name: 'Swiss Water Decaf',
-        price: 25,
+        price: 20,
         origin: 'Brazil, Ethiopia, Indonesia',
         roast: 'Medium',
         description: 'Chemical-free decaffeination process that retains the full flavor of the bean. Smooth and clean.',
@@ -237,7 +237,7 @@ function renderRoastedMenu() {
                 <div class="w-full md:w-48 lg:w-56 flex-shrink-0 relative">
                     <div class="absolute -inset-2 bg-white/5 rounded-sm transform -rotate-2"></div>
                     <img src="${product.image}" alt="${product.name}" 
-                         class="relative w-full h-64 md:h-auto object-cover rounded-sm shadow-xl grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500 border border-white/10">
+                         class="relative w-full h-auto object-contain rounded-sm shadow-xl grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500 border border-white/10">
                 </div>
 
                 <div class="flex-1 w-full flex flex-col justify-between">
@@ -287,8 +287,8 @@ function renderRoastedMenu() {
                             </div>
 
                             <button id="add-btn-${index}" onclick="window.quickAdd(${index})" 
-                                class="flex-1 sm:flex-none bg-gold-500 hover:bg-white text-coffee-900 font-bold px-6 rounded-sm uppercase tracking-widest text-xs transition-all shadow-lg whitespace-nowrap h-11 flex items-center justify-center">
-                                Add to List
+                                class="flex-none min-w-[140px] bg-gold-500 hover:bg-white text-coffee-900 font-bold px-4 sm:px-6 rounded-sm uppercase tracking-widest text-xs transition-all shadow-lg whitespace-nowrap h-11 flex items-center justify-center">
+                                Add to Cart
                             </button>
                         </div>
                     </div>
@@ -366,7 +366,7 @@ function renderGreenBeansMenu() {
                 <div class="w-full md:w-48 lg:w-56 flex-shrink-0 relative">
                     <div class="absolute -inset-2 bg-white/5 rounded-sm transform -rotate-2"></div>
                     <img src="${product.image}" alt="${product.name}" 
-                         class="relative w-full h-64 md:h-auto object-cover rounded-sm shadow-xl grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500 border border-white/10">
+                         class="relative w-full h-auto object-contain rounded-sm shadow-xl grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500 border border-white/10">
                 </div>
 
                 <div class="flex-1 w-full flex flex-col justify-between">
@@ -411,8 +411,8 @@ function renderGreenBeansMenu() {
                             </div>
 
                             <button id="green-add-btn-${index}" onclick="window.quickAddGreen(${index})" 
-                                class="flex-1 sm:flex-none bg-gold-500 hover:bg-white text-coffee-900 font-bold px-6 rounded-sm uppercase tracking-widest text-xs transition-all shadow-lg whitespace-nowrap h-11 flex items-center justify-center">
-                                Add to List
+                                class="flex-none min-w-[140px] bg-gold-500 hover:bg-white text-coffee-900 font-bold px-4 sm:px-6 rounded-sm uppercase tracking-widest text-xs transition-all shadow-lg whitespace-nowrap h-11 flex items-center justify-center">
+                                Add to Cart
                             </button>
                         </div>
                     </div>
@@ -534,7 +534,7 @@ function renderCustomBuilder() {
                 <div class="pt-6">
                     <button id="custom-add-btn" onclick="addCustomBlendToBrief()" 
                         class="w-full bg-gold-500 hover:bg-white text-coffee-900 font-bold py-4 rounded-sm uppercase tracking-widest transition-colors shadow-lg">
-                        Add to Roast List
+                        Add to Cart
                     </button>
                 </div>
 
@@ -586,7 +586,7 @@ window.addCustomBlendToBrief = () => {
         btn.innerText = "ADDED ✓";
         btn.classList.replace('bg-gold-500', 'bg-white');
         setTimeout(() => {
-            btn.innerText = "ADD TO ROAST LIST";
+            btn.innerText = "ADD TO CART";
             btn.classList.replace('bg-white', 'bg-gold-500');
         }, 2000);
     }
@@ -626,7 +626,7 @@ function openModal(data) {
 
     const btn = document.getElementById('modal-add-btn');
     if (btn) {
-        btn.innerText = "ADD TO LIST";
+        btn.innerText = "ADD TO CART";
         btn.classList.remove('bg-white', 'text-coffee-900');
         btn.classList.add('bg-gold-500', 'text-coffee-900');
     }
@@ -697,7 +697,7 @@ function addToBrief() {
     updateBriefUI();
 
     const btn = document.getElementById('modal-add-btn');
-    btn.innerText = "ADDED TO LIST ✓";
+    btn.innerText = "ADDED TO CART ✓";
     btn.classList.remove('bg-gold-500');
     btn.classList.add('bg-white', 'text-coffee-900');
 
@@ -930,7 +930,7 @@ function getEmailContent() {
         body += `      Price: $${item.totalPrice}\n`;
         body += `----------------------------------------\n`;
     });
-    body += `\nSubtotal: $${grandTotal}\n(Shipping & taxes to be calculated)\n\nPlease confirm my request and let me know the next steps.\n\nThanks!`;
+    body += `\nSubtotal: $${grandTotal}\n(Shipping to be calculated)\n\nPayment can be made by EFT or credit card (3% fee applies). Cheques are acceptable for large corporate orders.\n\nPlease confirm my request and let me know the next steps.\n\nThanks!`;
     return { subject, body };
 }
 

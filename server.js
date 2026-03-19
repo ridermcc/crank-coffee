@@ -21,9 +21,9 @@ const PRODUCT_CATALOG = {
     'Full Crank Espresso': 2200,
     'Half Crank Espresso': 2200,
     'Colombia Excelso Organic': 2400,
-    'Ethiopia Yergacheffe': 2500,
-    'India Monsoon Malabar': 2400,
-    'Swiss Water Decaf': 2400,
+    'Ethiopia Yergacheffe': 1700,
+    'India Monsoon Malabar': 3000,
+    'Swiss Water Decaf': 2000,
 
     // Green Beans
     'Green Colombia Excelso': 1500,
