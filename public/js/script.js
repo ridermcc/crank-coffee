@@ -63,7 +63,7 @@ const roastedProducts = [
     },
     {
         name: 'Ethiopia Yergacheffe',
-        price: 17,
+        price: 25,
         origin: 'Ethiopia',
         roast: 'Light-Medium',
         description: 'Renowned for its bright acidity and complex floral and berry notes. A tea-like body that is truly unique.',
@@ -105,7 +105,7 @@ const greenBeanProducts = [
     },
     {
         name: 'Green Ethiopia Yergacheffe',
-        price: 15,
+        price: 17,
         origin: 'Ethiopia',
         roast: 'Raw Green Bean',
         description: 'Raw green beans for home roasting. Floral and bright.',
@@ -114,7 +114,7 @@ const greenBeanProducts = [
     },
     {
         name: 'Green India Monsoon',
-        price: 15,
+        price: 20,
         origin: 'India',
         roast: 'Raw Green Bean',
         description: 'Raw green beans for home roasting. Spicy and earthy.',
@@ -123,7 +123,7 @@ const greenBeanProducts = [
     },
     {
         name: 'Green Swiss Water Decaf',
-        price: 15,
+        price: 10,
         origin: 'Brazil, Ethiopia, Indonesia',
         roast: 'Raw Green Bean',
         description: 'Raw green beans for home roasting. Chemical-free decaf.',
@@ -273,10 +273,10 @@ function renderRoastedMenu() {
 
                         <div class="h-8 w-px bg-white/10 hidden sm:block"></div>
 
-                        <div class="flex items-end gap-3 w-full sm:w-auto">
-                            <div class="flex-shrink-0">
-                                <label class="block text-[10px] text-gray-500 uppercase font-bold mb-1 text-center">Sets (${product.bags || 2} Bags)</label>
-                                <div class="flex items-center border border-white/20 rounded-sm bg-coffee-900/50 h-11">
+                        <div class="flex flex-col w-full sm:w-auto">
+                            <label class="block text-[10px] text-gray-500 uppercase font-bold mb-1 text-center sm:text-left">Sets (${product.bags || 2} Bags)</label>
+                            <div class="flex items-stretch gap-3 w-full sm:w-auto">
+                                <div class="flex-shrink-0 flex items-center border border-white/20 rounded-sm bg-coffee-900/50 h-11">
                                     <button onclick="window.adjustMenuQty(${index}, -1)" 
                                         class="w-8 h-full flex items-center justify-center hover:bg-white/10 text-gold-500 text-lg font-bold transition-colors">-</button>
                                     <input id="qty-input-${index}" type="number" value="1" readonly 
@@ -284,12 +284,12 @@ function renderRoastedMenu() {
                                     <button onclick="window.adjustMenuQty(${index}, 1)" 
                                         class="w-8 h-full flex items-center justify-center hover:bg-white/10 text-gold-500 text-lg font-bold transition-colors">+</button>
                                 </div>
-                            </div>
 
-                            <button id="add-btn-${index}" onclick="window.quickAdd(${index})" 
-                                class="flex-none min-w-[140px] bg-gold-500 hover:bg-white text-coffee-900 font-bold px-4 sm:px-6 rounded-sm uppercase tracking-widest text-xs transition-all shadow-lg whitespace-nowrap h-11 flex items-center justify-center">
-                                Add to Cart
-                            </button>
+                                <button id="add-btn-${index}" onclick="window.quickAdd(${index})" 
+                                    class="flex-1 w-full sm:w-auto bg-gold-500 hover:bg-white text-coffee-900 font-bold px-4 sm:px-6 rounded-sm uppercase tracking-widest text-xs transition-all shadow-lg whitespace-nowrap flex items-center justify-center">
+                                    Add to Cart
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -397,10 +397,10 @@ function renderGreenBeansMenu() {
                             <span class="text-gold-500 font-bold text-sm uppercase tracking-wider">Raw Green Bean</span>
                         </div>
 
-                        <div class="flex items-end gap-3 w-full sm:w-auto">
-                            <div class="flex-shrink-0">
-                                <label class="block text-[10px] text-gray-500 uppercase font-bold mb-1 text-center">Quantity (lbs)</label>
-                                <div class="flex items-center border border-white/20 rounded-sm bg-coffee-900/50 h-11">
+                        <div class="flex flex-col w-full sm:w-auto">
+                            <label class="block text-[10px] text-gray-500 uppercase font-bold mb-1 text-center sm:text-left">Quantity (lbs)</label>
+                            <div class="flex items-stretch gap-3 w-full sm:w-auto">
+                                <div class="flex-shrink-0 flex items-center border border-white/20 rounded-sm bg-coffee-900/50 h-11">
                                     <button onclick="window.adjustGreenQty(${index}, -1)" 
                                         class="w-8 h-full flex items-center justify-center hover:bg-white/10 text-gold-500 text-lg font-bold transition-colors">-</button>
                                     <input id="green-qty-input-${index}" type="number" value="1" readonly 
@@ -408,12 +408,12 @@ function renderGreenBeansMenu() {
                                     <button onclick="window.adjustGreenQty(${index}, 1)" 
                                         class="w-8 h-full flex items-center justify-center hover:bg-white/10 text-gold-500 text-lg font-bold transition-colors">+</button>
                                 </div>
-                            </div>
 
-                            <button id="green-add-btn-${index}" onclick="window.quickAddGreen(${index})" 
-                                class="flex-none min-w-[140px] bg-gold-500 hover:bg-white text-coffee-900 font-bold px-4 sm:px-6 rounded-sm uppercase tracking-widest text-xs transition-all shadow-lg whitespace-nowrap h-11 flex items-center justify-center">
-                                Add to Cart
-                            </button>
+                                <button id="green-add-btn-${index}" onclick="window.quickAddGreen(${index})" 
+                                    class="flex-1 w-full sm:w-auto bg-gold-500 hover:bg-white text-coffee-900 font-bold px-4 sm:px-6 rounded-sm uppercase tracking-widest text-xs transition-all shadow-lg whitespace-nowrap flex items-center justify-center">
+                                    Add to Cart
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -526,7 +526,7 @@ function renderCustomBuilder() {
                                 <button onclick="adjustCustomQty(1)" class="w-8 h-8 flex items-center justify-center text-gold-500 hover:text-white font-bold">+</button>
                             </div>
                             
-                            <span class="font-bold text-gold-500">$${100 * state.customBlendQty}</span>
+                            <span class="font-bold text-gold-500">$${125 * state.customBlendQty}</span>
                         </div>
                     </div>
                 </div>
@@ -571,8 +571,8 @@ window.addCustomBlendToBrief = () => {
         blend: state.customSelection.blend.composition,
         qty: state.customBlendQty,
         unit: 'sets (4 bags)',
-        unitPrice: 100,
-        totalPrice: 100 * state.customBlendQty,
+        unitPrice: 125,
+        totalPrice: 125 * state.customBlendQty,
         image: 'assets/images/Product_Images/Roasted_Bags/full-crank.webp'
     };
 
